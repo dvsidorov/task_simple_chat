@@ -20,7 +20,7 @@ async def on_shutdown(app):
 async def chat_handler(request):
     login = request.cookies.get('login', petname.name())
     context = {
-        'people': [login for login in request.app['websockets']],
+        'people': set([login for login in request.app['websockets']] + [login]),
         'notify': f'{login} joined to chat',
     }
     response = aiohttp_jinja2.render_template('chat.html',
