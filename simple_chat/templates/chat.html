@@ -1,0 +1,71 @@
+
+
+<html>
+    <head>
+        <link rel="shortcut icon" href='/static/images/favicon.ico' >
+        <link rel="stylesheet" href="/static/css/bootstrap.css" >
+        <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">-->
+        <link href="/static/css/style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container messages">
+            <div class="row">
+                <div class="col-3">
+                    <div class="people-list">
+                        <ul class="list-group">
+                            {% for p in people %}
+                            <li class="list-group-item">
+                                {{ p }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="messages-list">
+                                    <div class="messages-list-container">
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <div class="people-name">
+                                                    User
+                                                </div>
+                                                <div class="people-message">
+                                                    Morbi leo risus sfafasdfasfasf
+                                                </div>
+                                                <div class="people-time">
+                                                    Morbi leo risus sfafasdfasfasf
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="messages-input">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Write message">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/static/js/jquery.js" ></script>
+        <script src="/static/js/popper.js" ></script>
+        <script src="/static/js/bootstrap.js" ></script>
+        <script src="/static/js/cookie.js" ></script>
+        <script src="/static/js/base.js" ></script>
+        <script src="/static/js/app.js" ></script>
+    </body>
+</html>

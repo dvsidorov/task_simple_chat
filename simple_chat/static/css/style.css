@@ -1,0 +1,40 @@
+
+
+.chat-window {
+
+}
+
+
+.people {
+    margin-top: 100px;
+    background-color: #0f6674;
+    height: 700px;
+}
+
+
+.messages {
+    margin-top: 100px;
+    background-color: #607782;
+}
+
+
+.messages-list {
+    background-color: rgba(134, 181, 255, 0.5);
+    height: 700px;
+}
+
+
+.messages-list-container {}
+
+
+.messages-input {
+    background-color: #7abaff;
+    height: 60px;
+    padding: 10px;
+}
+
+
+.people-list {
+    background-color: #a270c7;
+    height: 750px;
+}
