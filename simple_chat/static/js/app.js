@@ -22,7 +22,7 @@ window.options = window.options || {};
             let host = window.location.host;
             let obj = this;
 
-            this.socket = new WebSocket("ws://" + host + "/ws");
+            this.socket = new WebSocket("wss://" + host + "/ws");
             this.socket.onopen = function() {
                 console.log("Соединение установлено.");
             };

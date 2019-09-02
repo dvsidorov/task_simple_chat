@@ -2,6 +2,7 @@
 
 
 import json
+import os
 import datetime
 import petname
 import jinja2
@@ -91,4 +92,4 @@ if __name__ == '__main__':
         web.static('/static/', path='static'),
     ])
     app.on_shutdown.append(on_shutdown)
-    web.run_app(app)
+    web.run_app(app, port=os.getenv('PORT', 5000))
