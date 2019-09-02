@@ -49,6 +49,7 @@ async def ws_handler(request):
                                                        {'notify': f'{login} joined to chat'}),
             }))
 
+    # TODO: проработать корректное закрытие сокета
     try:
         async for msg in ws:
             if msg.type == aiohttp.WSMsgType.TEXT:
@@ -66,16 +67,10 @@ async def ws_handler(request):
                     }))
             elif msg.type == aiohttp.WSMsgType.ERROR:
                 pass
+    except:
+        ws.close()
     finally:
         del request.app['websockets'][login]
-        await ws_.send_str(json.dumps({
-            'people_list': aiohttp_jinja2.render_string('people_list.html',
-                                                        request,
-                                                        {'people_list': [login for login in request.app['websockets']]}),
-            'notify': aiohttp_jinja2.render_string('notify.html',
-                                                   request,
-                                                   {'notify': f'{login} lived this chat'}),
-        }))
 
     return ws
 
