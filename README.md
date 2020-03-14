@@ -4,7 +4,7 @@ Simple chat on sockets and aiohttp
 
 ## Built With
 
-* [Django](https://github.com/django/django.git) - The web framework used
+* [Aiohttp](https://docs.aiohttp.org/en/stable/) - The web framework used
 
 
 ## Authors
@@ -14,10 +14,9 @@ Simple chat on sockets and aiohttp
 
 ## Demo (Heroku)
 
-https://young-tor-97288.herokuapp.com
+https://guarded-reaches-19856.herokuapp.com/chat
 
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-============================================================================================
