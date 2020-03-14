@@ -21,8 +21,7 @@ window.options = window.options || {};
         this.initWs = function () {
             let host = window.location.host;
             let obj = this;
-
-            this.socket = new WebSocket("ws://" + host + "/ws");
+            this.socket = new WebSocket("wss://" + host + "/ws");
             this.socket.onopen = function() {
                 console.log("Соединение установлено.");
             };

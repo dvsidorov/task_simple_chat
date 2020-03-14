@@ -2,3 +2,4 @@ aiohttp==3.5.4
 aiohttp-jinja2==1.1.2
 pytest
 pytest-aiohttp
+petname
